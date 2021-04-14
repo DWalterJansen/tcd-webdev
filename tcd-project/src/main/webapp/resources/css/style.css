@@ -1,0 +1,89 @@
+/********************************************************************************
+*                     ORGANIZAÇÃO DO ARQUIVO STYLE                              *
+*********************************************************************************
+* 1 - Declaração das variáveis utilizadas
+* 2 - Importação das fontes que serão utilizadas
+* 3 - Formatação padrão dos componentes (Ex.: h1, button, body, etc)
+* 4 - Header
+* 5 - Footer
+*/
+/*
+    1 - Declaração das variáveis utilizadas                       
+*/
+:root {
+    --black-color: #000000;
+    --blue-color: #3E6CC2;
+    --gray-color: #C4C4C4;
+    --white-color: #FFFFFF;
+    --yellow-color: #FBBC05;
+}
+/*
+    2 - Importação das fontes que serão utilizadas                       
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*
+    3 - Formatação padrão dos componentes (Ex.: h1, button, body, etc)                      
+*/
+container {
+    width: 100%;
+    margin: 0 auto;
+}
+/*
+    4 - Header                     
+*/
+header {
+    padding: 1rem 5rem;
+    height: 100px;
+}
+header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Navbar */
+header .nav-tabs {
+    display: block;
+    justify-content: center;
+    width: 100%;
+}
+header .nav-tabs ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: 40px;
+    list-style: none;
+}
+header .nav-tabs ul li {
+    display: inline-block;
+    text-align: center;
+    align-self: center;
+    width: 100px;
+    height: 40px;
+    float: left;
+    margin: 0rem 1rem;
+}
+header .nav-tabs ul li a,
+header .nav-tabs ul li a:hover,
+header .nav-tabs ul li a:active,
+header .nav-tabs ul li a:visited{
+    text-decoration: none;
+}
+/*
+    5 - Footer                     
+*/
+footer {
+    padding: 1rem 5rem;
+    height: 200px;  
+}
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-content {
+    text-align: center;
+    width: 100%;
+}
+footer .footer-content p { 
+    padding: 0.25rem 0;
+}

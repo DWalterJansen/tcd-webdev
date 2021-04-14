@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="css/typography.css"/>
+        <h:outputStylesheet name="css/style.css"/>
+        <title>iPet</title>
+        <link rel="shortcut icon" href="resources/images/favicon.png" />
+    </h:head>
+
+    <h:body>
+        <div class="container">
+            
+        </div>
+        <header>
+            <div class="container">
+                <div class="header-title">
+                    <a href="home.xhtml">
+                        <img class="logo" src="resources/images/logo.png" alt="logo iPet" />
+                    </a>
+                </div>
+                <ui:insert name="header">
+                    <nav class="nav-tabs">
+                        <ul>
+                            <li>
+                                <a class="router" href="#">Saiba Mais</a>
+                            </li>
+                            <li>
+                                <a class="router" href="#">Entrar</a>
+                            </li>
+                            <li>
+                                <p:button class="router btn" href="#" value="Cadastrar" />
+                            </li>
+                        </ul>
+                    </nav>
+                </ui:insert>
+            </div>
+        </header>
+
+        <main>
+            <ui:insert name="content">Content</ui:insert>
+        </main>
+
+        <footer>
+            <ui:insert name="footer">
+                <div class="container">
+                    <div class="footer-title">
+                        <a href="home.xhtml">
+                            <img class="logo" src="resources/images/logo-light.png" alt="logo light iPet" />
+                        </a>
+                    </div>
+                    <div class="footer-content">
+                        <p class="copy">&copy; Copyright 2021 - <span class="logo">iPet</span></p>
+                        <p>Todos os direitos reservados</p>
+                        <p>79.897.738/0001-53 / Rua Mastim Napolitano, 934  - 62442</p>
+                    </div>
+                </div>
+            </ui:insert>
+        </footer>
+
+    </h:body>
+
+</html>
