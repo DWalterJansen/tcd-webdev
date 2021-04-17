@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./WEB-INF/templates/template.xhtml"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="body">
+        <div class="l-container" 
+             style="background-image: url(resources/images/banner/banner-login.png);
+             background-attachment: fixed; background-size: cover;">
+            <main class="frame">
+                <div class="center">
+                    <p:card class="form-login">
+                        <a class="logo" href="#">
+                            <img src="resources/images/logo.png" alt="logo iPet" />
+                        </a>
+                        <p:inputText placeholder="Usuário" />
+                        <p:inputText placeholder="Senha" />
+                        <p:button class="router btn" href="#" value="Entrar" />
+                        <a class="register" href="#">
+                            Não possui cadastro?
+                        </a>
+                    </p:card>
+                </div>
+            </main>
+        </div>
+    </ui:define>
+
+</ui:composition>

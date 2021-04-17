@@ -27,6 +27,12 @@
 /*
     3 - Formatação padrão dos componentes (Ex.: h1, button, body, etc)                      
 */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
 container {
     width: 100%;
     margin: 0 auto;

@@ -10,61 +10,63 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <h:outputStylesheet name="css/typography.css"/>
         <h:outputStylesheet name="css/style.css"/>
+        <h:outputStylesheet name="css/login.css"/>
         <h:outputStylesheet library="webjars" name="font-awesome/5.15.2/css/all-jsf.css" />
         <title>iPet</title>
         <link rel="shortcut icon" href="resources/images/favicon.png" />
     </h:head>
 
     <h:body>
-        <div class="container">
-            
-        </div>
-        <header>
+        <ui:insert name="body">
             <div class="container">
-                <div class="header-title">
-                    <a href="#">
-                        <img class="logo" src="resources/images/logo.png" alt="logo iPet" />
-                    </a>
-                </div>
-                <ui:insert name="header">
-                    <nav class="nav-tabs">
-                        <ul>
-                            <li>
-                                <a class="router" href="#">Saiba Mais</a>
-                            </li>
-                            <li>
-                                <a class="router" href="login.xhtml">Entrar</a>
-                            </li>
-                            <li>
-                                <p:button class="router btn" href="#" value="Cadastrar" />
-                            </li>
-                        </ul>
-                    </nav>
-                </ui:insert>
+
             </div>
-        </header>
-
-        <main>
-            <ui:insert name="content">Content</ui:insert>
-        </main>
-
-        <footer>
-            <ui:insert name="footer">
+            <header>
                 <div class="container">
-                    <div class="footer-title">
-                        <a href="home.xhtml">
-                            <img class="logo" src="resources/images/logo-light.png" alt="logo light iPet" />
+                    <div class="header-title">
+                        <a href="#">
+                            <img class="logo" src="resources/images/logo.png" alt="logo iPet" />
                         </a>
                     </div>
-                    <div class="footer-content">
-                        <p class="copy">&copy; Copyright 2021 - <span class="logo">iPet</span></p>
-                        <p>Todos os direitos reservados</p>
-                        <p>79.897.738/0001-53 / Rua Mastim Napolitano, 934  - 62442</p>
-                    </div>
+                    <ui:insert name="header">
+                        <nav class="nav-tabs">
+                            <ul>
+                                <li>
+                                    <a class="router" href="#">Saiba Mais</a>
+                                </li>
+                                <li>
+                                    <a class="router" href="login.xhtml">Entrar</a>
+                                </li>
+                                <li>
+                                    <p:button class="router btn" href="#" value="Cadastrar" />
+                                </li>
+                            </ul>
+                        </nav>
+                    </ui:insert>
                 </div>
-            </ui:insert>
-        </footer>
+            </header>
 
+            <main>
+                <ui:insert name="content">Content</ui:insert>
+            </main>
+
+            <footer>
+                <ui:insert name="footer">
+                    <div class="container">
+                        <div class="footer-title">
+                            <a href="home.xhtml">
+                                <img class="logo" src="resources/images/logo-light.png" alt="logo light iPet" />
+                            </a>
+                        </div>
+                        <div class="footer-content">
+                            <p class="copy">&copy; Copyright 2021 - <span class="logo">iPet</span></p>
+                            <p>Todos os direitos reservados</p>
+                            <p>79.897.738/0001-53 / Rua Mastim Napolitano, 934  - 62442</p>
+                        </div>
+                    </div>
+                </ui:insert>
+            </footer>
+        </ui:insert>
     </h:body>
 
 </html>
