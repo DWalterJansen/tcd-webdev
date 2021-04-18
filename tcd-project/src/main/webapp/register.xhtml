@@ -5,21 +5,24 @@
                 xmlns:p="http://primefaces.org/ui">
 
     <ui:define name="body">
-        <div class="l-container" 
-             style="background-image: url(resources/images/banner/banner-login.png);
+        <div class="r-container" 
+             style="background-image: url(resources/images/banner/banner-register.png);
              background-attachment: fixed; background-size: cover;">
-            <main class="l-frame">
-                <div class="l-center">
-                    <p:card class="form-login">
+            <main class="r-frame">
+                <div class="r-center">
+                    <p:card class="form-register">
                         <a class="logo" href="home.xhtml">
                             <img src="resources/images/logo.png" alt="logo iPet" />
                         </a>
-                        <p:inputText placeholder="Usuário" />
-                        <p:inputText placeholder="Senha" />
+                        <p:inputText placeholder="Nome da Empresa" />
+                        <p:inputText placeholder="Telefone" />
+                        <p:inputText placeholder="CNPJ" />
+                        <p:inputText placeholder="Email" />
+                        <p:inputText placeholder="Senha de Acesso" />
                         <p:button class="router btn" href="#" value="Entrar" />
-                        <p class="register" >Não possui conta?
-                            <a href="register.xhtml">
-                               Cadastre-se agora
+                        <p class="login">Já possui conta?
+                            <a href="login.xhtml">
+                               Entre agora
                             </a>
                         </p>
                     </p:card>
