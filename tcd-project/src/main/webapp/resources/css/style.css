@@ -1,0 +1,227 @@
+/********************************************************************************
+*                     ORGANIZAÇÃO DO ARQUIVO STYLE                          *
+*********************************************************************************
+* 1 - Declaração das variáveis utilizadas
+* 2 - Importação das fontes que serão utilizadas
+* 3 - Formatação padrão dos componentes (Ex.: h1, button, body, etc)
+* 4 - Header
+* 5 - Footer
+* 6 - Banner Principal
+* 7 - Benefits
+* 8 - Team
+*/
+/*
+    1 - Declaração das variáveis utilizadas                       
+*/
+:root {
+    --black-color: #000000;
+    --blue-color: #3E6CC2;
+    --gray-color: #5E5E5E;
+    --white-color: #FFFFFF;
+    --yellow-color: #FBBC05;
+}
+/*
+    2 - Importação das fontes que serão utilizadas                       
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*
+    3 - Formatação padrão dos componentes (Ex.: h1, button, body, etc)                      
+*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+container {
+    width: 100%;
+    margin: 0 auto;
+}
+/*
+    4 - Header                     
+*/
+header {
+    padding: 1rem 5rem;
+    height: 100px;
+}
+header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Navbar */
+header .nav-tabs {
+    display: block;
+    justify-content: center;
+    width: 100%;
+}
+header .nav-tabs ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: 40px;
+    list-style: none;
+}
+header .nav-tabs ul li {
+    display: inline-block;
+    text-align: center;
+    align-self: center;
+    width: 100px;
+    height: 40px;
+    float: left;
+    margin: 0rem 1rem;
+}
+header .nav-tabs ul li a,
+header .nav-tabs ul li a:hover,
+header .nav-tabs ul li a:active,
+header .nav-tabs ul li a:visited{
+    text-decoration: none;
+}
+/*
+    5 - Footer                     
+*/
+footer {
+    padding: 1rem 5rem;
+    height: 150px;  
+}
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-content {
+    text-align: center;
+    width: 100%;
+}
+footer .footer-content p { 
+    padding: 0.25rem 0;
+}
+/*
+    6 - Banner Principal                   
+*/
+.banner-principal {
+    display: block;
+    width: 100%;
+    height: 400px;
+    background: var(--blue-color);
+    text-align: center;
+    padding: 0 0.5rem;
+}
+.banner-principal .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%
+}
+.banner-principal .container .banner-image {
+    width: 50%;
+}
+.banner-principal .container .banner-image img {
+    width: 450px;
+}
+.banner-principal .container .banner-content {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.banner-principal .container .banner-content .subtitle {
+    margin: 1rem 0;
+}
+.banner-principal .container .banner-content .title,
+.banner-principal .container .banner-content .subtitle {
+    max-width: 500px;
+}
+/*
+    7 - Benefits            
+*/
+.benefits {
+    display: block;
+    width: 100%;
+    height: 500px;
+    padding: 0 0.5rem;
+}
+.benefits .container {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.benefits .container .benefits-title {
+    display: block;
+    width: 100%;
+}
+.benefits .container .benefits-title h1 {
+    margin: 25px 0;
+}
+.benefits .container .benefits-enterprise {
+    display: flex;
+}
+.benefits .container .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.benefits .container .row .col {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    margin: 0.25rem 0;
+}
+.benefits .container .benefits-image img {
+    max-height: 200px;
+    max-width: 250px;
+}
+.benefits .container  .benefits-content .blue-title {
+    color: var(--blue-color);
+    font-weight: bold;
+    text-align: start;
+    padding-bottom: 0.5rem;
+}
+.benefits .container  .benefits-content .yellow-title {
+    color: var(--yellow-color);
+    font-weight: bold;
+    text-align: start;
+    padding-bottom: 0.5rem;
+}
+
+/*
+    8 - Team            
+*/
+.team {
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding: 0 0.5rem;
+}
+.team .container {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.team .container .team-title {
+    display: block;
+    width: 100%;
+}
+.team .container .team-title h1 {
+    margin: 25px 0;
+    
+}
+.team .container .row {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.team .container .row .col {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+.team .container .img-team {
+    padding: 0 0.5rem;
+}
+.team .container .img-team img {
+    max-height: 150px;
+    max-width: 150px;
+}
