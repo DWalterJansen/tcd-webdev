@@ -2,32 +2,35 @@
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 template="./WEB-INF/templates/template.xhtml"
-                xmlns:p="http://primefaces.org/ui">
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
 
     <ui:define name="body">
-        <div class="r-container" 
-             style="background-image: url(resources/images/banner/banner-register.png);
-             background-attachment: fixed; background-size: cover;">
-            <main class="r-frame">
-                <div class="r-center">
-                    <p:card class="form-register">
-                        <a class="logo" href="home.xhtml">
-                            <img src="resources/images/logo.png" alt="logo iPet" />
-                        </a>
-                        <p:inputText placeholder="Nome da Empresa" />
-                        <p:inputText placeholder="Telefone" />
-                        <p:inputText placeholder="CNPJ" />
-                        <p:inputText placeholder="Email" />
-                        <p:inputText placeholder="Senha de Acesso" />
-                        <p:button class="router btn" href="#" value="Entrar" />
-                        <p class="login">Já possui conta?
-                            <a href="login.xhtml">
-                               Entre agora
-                            </a>
-                        </p>
-                    </p:card>
-                </div>
-            </main>
+        <div class="register">
+            <div class="container" 
+                style="background-image: url(resources/images/banner/banner-register.png);
+                background-attachment: fixed; background-size: cover;">
+               <div class="r-frame">
+                   <div class="r-center">
+                       <p:card class="form-register">
+                           <a class="logo" href="home.xhtml">
+                               <img src="resources/images/logo.png" alt="logo iPet" />
+                           </a>
+                           <p:inputText placeholder="Nome da Empresa" />
+                           <p:inputText placeholder="Telefone" />
+                           <p:inputText placeholder="CNPJ" />
+                           <p:inputText placeholder="Email" />
+                           <p:inputText placeholder="Senha de Acesso" />
+                           <p:button class="router btn" href="#" value="Entrar" />
+                           <p class="register-login">Já possui conta?
+                               <a href="login.xhtml">
+                                  Entre agora
+                               </a>
+                           </p>
+                       </p:card>
+                   </div>
+               </div>
+           </div>
         </div>
     </ui:define>
 

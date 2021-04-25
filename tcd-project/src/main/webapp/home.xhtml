@@ -2,116 +2,116 @@
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition 
     xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-    template="./WEB-INF/templates/template.xhtml">
+    template="./WEB-INF/templates/template.xhtml"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
 
     <ui:define name="content">
-        <section class="banner-principal">
+        <!-- Banner Principal -->
+        <div class="banner-principal">
+             <div class="container">
+                 <div class="banner-image">
+                     <img src="resources/images/banner/banner-pets.png" alt="banner pets" />
+                 </div>
+                 <div class="banner-content">
+                     <h1 class="title">Com o iPet você têm liberdade na hora de comprar</h1>
+                     <p class="subtitle">Economize tempo na hora de comprar produtos e ganhe mais tempo para brincar com o seu pet</p>
+                 </div>
+             </div>
+        </div>
+        <!-- Statical Info -->
+        <div class="statical-info">
             <div class="container">
-                <div class="banner-image">
-                    <img class="logo" src="resources/images/banner/online_shopping.png" alt="banner principal" />
+                <div class="info">
+                    <h2>50</h2>
+                    <p>Cidades já utilizam o iPet</p>
                 </div>
-                <div class="banner-content">
-                    <h1 class="title">Leve o iPet Enterprise para o seu negócio </h1>
-                    <p class="subtitle">O <span>iPet Enterprise</span> é uma solução tecnológica que busca auxiliar as empresas de saúde animal em sua gestão.</p>
+                <div class="info">
+                    <h2>150</h2>
+                    <p>Pet Shops disponíveis na plataforma</p>
+                </div>
+                <div class="info">
+                    <h2>5000</h2>
+                    <p>Clientes atendidos</p>
                 </div>
             </div>
-        </section>
-        <main class="benefits">
+        </div>
+        <!-- Informational Banner -->
+        <div class="informational-banner">
             <div class="container">
-                <div class="benefits-title">
-                    <h1>Benefícios do iPet Enterprise</h1>
+                <h2>Mordenize o seu Pet Shop</h2>
+                <p>
+                    O <strong>iPet Enterprise</strong> quer te ajudar a mordenizar o cuidado com os pet's e atender melhor a necessidade dos seus clientes. Essa solução oferece a você acesso aos dados dos pedidos, produtos vendidos, dashboard das vendas online e promoções 100% online e sem cobrar nada a mais por isso.
+                </p>
+                <p:button  href="knowMore.xhtml" value="Quero saber mais"/>
+            </div>
+        </div>
+        <!-- Banner Pets -->
+        <div class="banner-pets"> 
+            <div class="container">
+                <h2>Fique por dentro das novidades do iPet Enterprise</h2>
+                <div class="form">
+                    <p:inputText placeholder="Digite o seu e-mail" />
+                    <p:button class="notice" href="#" value="Receber Notícias"/>
                 </div>
-                <div class="benefits-enterprise">
-                    <div class="row">
-                        <div class="col">
-                            <div class="benefits-image">
-                                <img src="resources/images/icons/financial_data.png" width="250px" />              
-                            </div>
-                            <div class="benefits-content">
-                                <h2 class="blue-title">Dashboard</h2>
-                                <p>Você contará com um dashboard que centralizará as informações relativas ao seu negócio.</p>
-                            </div>
+            </div>
+        </div>
+        <!-- Banner Opinion -->
+        <div class="banner-opinion"> 
+            <h2 class="title">Saiba o que dizem nossos clientes</h2>
+            <div class="container">
+                <p:card>
+                    <header class="header-card">
+                        <p:avatar size="xlarge" shape="circle">
+                            <img src="resources/images/avatar/avatar-1.png" alt="alt"/>
+                        </p:avatar>
+                        <div class="client-data">
+                            <p class="name">Adriana Goés</p>
+                            <p class="job">Ceo da Love Pets</p>
+                            <p class="date">18 de Abril de 2021</p>
                         </div>
-                        <div class="col">
-                            <div class="benefits-image">
-                                <img src="resources/images/icons/confort.png" /> 
-                            </div>
-                            <div class="benefits-content">
-                                <h2 class="yellow-title">Acesse seus dados de qualquer lugar</h2>
-                                <p>Graças ao iPet Enterprise você poderá acessar as informações sobre suas vendas de qualquer lugar, sem precisar instalar algum software para isso.</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="benefits-content">
-                                <h2 class="yellow-title">Gestão dos produtos</h2>
-                                <p>Você contará com um dashboard que centralizará as informações relativas as vendas e ao estoque dos seus produtos.</p>
-                            </div>
-                            <div class="benefits-image">
-                                <img src="resources/images/icons/report.png" />  
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="benefits-content">
-                                <h2 class="blue-title">Foco no cliente</h2>
-                                <p>Você poderá fidelizar e cuidar melhor do seu cliente e de seu pet, através do sistema de vendas online e promoções exclusivas.</p>
-                            </div>
-                            <div class="benefits-image">
-                                <img src="resources/images/icons/pet.png" /> 
-                            </div>
-                        </div>
+                    </header>
+                    <div class="card-content">
+                        <p>
+                            Sou dona de um pet shop há 7 anos, a Love Pets, e percebi a necessidade de ter o’ delivery’ como opção de atendimento. Uma forma de agilizar os pedidos e satisfazer os nossos clientes. E com certeza, utilizar o iPet Enterprise foi a melhor decisão, tenho relatórios atualizados sobre o negócio, controle dos pedidos recebidos e do estoque. 
+                        </p>
                     </div>
-                </div>
-            </div>
-        </main>
-        <section class="team">
-            <div class="container">
-                <div class="team-title">
-                    <h1>Conheça a nossa equipe</h1>
-                </div>
-                <div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="img-team">
-                                <img src="resources/images/team/Anne.png" alt="Anne Caroline" />
-                            </div>
-                            <div class="content-team">
-                                <h2>Anne Caroline</h2>
-                                <p>UI-Designer / Desenvolvedora Front-End</p>
-                                <div class="icon-team">
-                                    <a href="https://github.com/carolinepsantos" target="_blank"><i class="fab fa-github github-icon"></i></a>
-                                    <a href="https://www.linkedin.com/in/anne-caroline-pena-dos-santos-4b921618b/" target="_blank"><i class="fab fa-linkedin linkedin-icon"></i></a>
-                                </div>
-                            </div>
+                </p:card>
+                <p:card>
+                   <header class="header-card">
+                        <p:avatar size="xlarge" shape="circle">
+                            <img src="resources/images/avatar/avatar-2.png" alt="alt"/>
+                        </p:avatar>
+                        <div class="client-data">
+                            <p class="name">Marco André</p>
+                            <p class="job">Gerente da Care Pet</p>
+                            <p class="date">16 de Abril de 2021</p>
                         </div>
-                        <div class="col">
-                            <div class="img-team">
-                                <img src="resources/images/team/David.png" alt="David Jansen" />
-                            </div>
-                            <div class="content-team">
-                                <h2>David Jansen</h2>
-                                <p>Designer / Desenvolvedor Full Stack</p>
-                                <div class="icon-team">
-                                    <a href="https://github.com/DWalterJansen" target="_blank"><i class="fab fa-github github-icon"></i></a>
-                                    <a href="https://www.linkedin.com/in/david-w-jansen-2080b01a8/" target="_blank"><i class="fab fa-linkedin linkedin-icon"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="img-team">
-                                <img src="resources/images/team/Eike.png" alt="Eike Stalei" />
-                            </div>
-                            <div class="content-team">
-                                <h2>Eike Stalei</h2>
-                                <p>CopyWriter / Desenvolvedor</p>
-                                <div class="icon-team">
-                                    <a href="https://github.com/EStalei" target="_blank"><i class="fab fa-github github-icon"></i></a>
-                                    <a href="https://www.linkedin.com/in/eike-neves-16418080/" target="_blank"><i class="fab fa-linkedin linkedin-icon"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                    </header>  
+                    <div class="card-content">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        </p>
                     </div>
-                </div>
+                </p:card>
+                <p:card>
+                   <header class="header-card">
+                        <p:avatar size="xlarge" shape="circle">
+                            <img src="resources/images/avatar/avatar-3.png" alt="alt"/>
+                        </p:avatar>
+                        <div class="client-data">
+                            <p class="name">Júlia Menezes</p>
+                            <p class="job">Sócia da Pets</p>
+                            <p class="date">15 de Abril de 2021</p>
+                        </div>
+                    </header>
+                    <div class="card-content">
+                        <p>
+                           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        </p>
+                    </div>
+                </p:card>
             </div>
-        </section>
+        </div>
     </ui:define>
 </ui:composition>

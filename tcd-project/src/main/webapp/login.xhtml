@@ -2,29 +2,32 @@
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 template="./WEB-INF/templates/template.xhtml"
-                xmlns:p="http://primefaces.org/ui">
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
 
     <ui:define name="body">
-        <div class="l-container" 
-             style="background-image: url(resources/images/banner/banner-login.png);
-             background-attachment: fixed; background-size: cover;">
-            <main class="l-frame">
-                <div class="l-center">
-                    <p:card class="form-login">
-                        <a class="logo" href="home.xhtml">
-                            <img src="resources/images/logo.png" alt="logo iPet" />
-                        </a>
-                        <p:inputText placeholder="Usuário" />
-                        <p:inputText placeholder="Senha" />
-                        <p:button class="router btn" href="#" value="Entrar" />
-                        <p class="register" >Não possui conta?
-                            <a href="register.xhtml">
-                               Cadastre-se agora
-                            </a>
-                        </p>
-                    </p:card>
-                </div>
-            </main>
+        <div class="login">
+            <div class="l-container" 
+                style="background-image: url(resources/images/banner/banner-login.png);
+                background-attachment: fixed; background-size: cover;">
+               <div class="l-frame">
+                   <div class="l-center">
+                       <p:card class="form-login">
+                           <a class="logo" href="home.xhtml">
+                               <img src="resources/images/logo.png" alt="logo iPet" />
+                           </a>
+                           <p:inputText placeholder="Usuário" />
+                           <p:inputText placeholder="Senha" />
+                           <p:button class="router btn" href="#" value="Entrar" />
+                           <p class="login-register" >Não possui conta?
+                               <a href="register.xhtml">
+                                  Cadastre-se agora
+                               </a>
+                           </p>
+                       </p:card>
+                   </div>
+               </div>
+           </div>
         </div>
     </ui:define>
 
