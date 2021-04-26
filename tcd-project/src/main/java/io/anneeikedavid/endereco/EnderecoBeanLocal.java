@@ -15,5 +15,11 @@ import javax.ejb.Local;
 public interface EnderecoBeanLocal {
 
     void salvar(Endereco endereco);
+
+    void atualizar(Endereco endereco);
+
+    Endereco buscar(Long id);
+
+    void apagar(Endereco endereco);
     
 }

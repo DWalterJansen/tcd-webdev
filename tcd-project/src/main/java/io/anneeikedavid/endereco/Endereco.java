@@ -108,4 +108,8 @@ public class Endereco implements Serializable {
     public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
+    
+    public void encontrarLatLog(){
+        // TODO: Falta implementar
+    }
 }

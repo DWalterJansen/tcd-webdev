@@ -15,5 +15,15 @@ import javax.ejb.Local;
 public interface ProdutoBeanLocal {
 
     void salvar(Produto produto);
+
+    void atualizar(Produto produto);
+
+    Produto buscar(Long id);
+
+    void apagar(Produto produto);
+
+    void aumentarQuantidadeEstoque(Produto produto, Integer quantidade);
+    
+    Boolean diminuirQuantidadeEstoque(Produto produto, Integer quantidade);
     
 }

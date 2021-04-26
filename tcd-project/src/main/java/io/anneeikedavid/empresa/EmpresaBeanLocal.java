@@ -15,5 +15,11 @@ import javax.ejb.Local;
 public interface EmpresaBeanLocal {
 
     void salvar(Empresa empresa);
+
+    void atualizar(Empresa empresa);
+
+    Empresa buscar(Long id);
+
+    void apagar(Empresa empresa);
     
 }

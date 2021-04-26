@@ -15,5 +15,14 @@ import javax.ejb.Local;
 public interface UsuarioBeanLocal {
 
     void salvar(Usuario usuario);
+
+    void atualizar(Usuario usuario);
+    
+    void apagar(Usuario usuario);
+
+    Usuario buscar(Long id);
+
+    Boolean verificarDadosLogin(String email, String senha);
+
     
 }

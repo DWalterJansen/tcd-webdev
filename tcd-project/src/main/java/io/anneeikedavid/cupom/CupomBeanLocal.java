@@ -15,5 +15,11 @@ import javax.ejb.Local;
 public interface CupomBeanLocal {
 
     void salvar(Cupom cupom);
+
+    void atualizar(Cupom cupom);
+
+    Cupom buscar(Long id);
+
+    void apagar(Cupom cupom);
     
 }

@@ -22,4 +22,23 @@ public class UsuarioBean implements UsuarioBeanLocal {
     @Override
     public void salvar(Usuario usuario) {
     }
+
+    @Override
+    public void atualizar(Usuario usuario) {
+    }
+    
+    @Override
+    public void apagar(Usuario usuario) {
+    }
+    
+    @Override
+    public Usuario buscar(Long id) {
+        return null;
+    }
+
+    @Override
+    public Boolean verificarDadosLogin(String email, String senha) {
+        return null;
+    }
+    
 }

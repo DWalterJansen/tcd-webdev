@@ -22,4 +22,17 @@ public class CategoriaBean implements CategoriaBeanLocal {
     @Override
     public void salvar(Categoria categoria) {
     }
+
+    @Override
+    public void atualizar(Categoria categoria) {
+    }
+
+    @Override
+    public Categoria buscar(Long id) {
+        return null;
+    }
+
+    @Override
+    public void apagar(Categoria categoria) {
+    }
 }

@@ -22,4 +22,28 @@ public class ProdutoBean implements ProdutoBeanLocal {
     @Override
     public void salvar(Produto produto) {
     }
+
+    @Override
+    public void atualizar(Produto produto) {
+    }
+
+    @Override
+    public Produto buscar(Long id) {
+        return null;
+    }
+
+    @Override
+    public void apagar(Produto produto) {
+    }
+
+    @Override
+    public void aumentarQuantidadeEstoque(Produto produto, Integer quantidade) {
+    }
+    
+    @Override
+    public Boolean diminuirQuantidadeEstoque(Produto produto, Integer quantidade) {
+        return true;
+    }
+    
+    
 }

@@ -15,5 +15,11 @@ import javax.ejb.Local;
 public interface ItemBeanLocal {
 
     void Salvar(Item item);
+
+    void atualizar(Item item);
+    
+    Item buscar(Long id);
+
+    void apagar(Item item);
     
 }

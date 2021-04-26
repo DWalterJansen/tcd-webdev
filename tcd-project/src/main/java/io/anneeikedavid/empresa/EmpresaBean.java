@@ -22,4 +22,18 @@ public class EmpresaBean implements EmpresaBeanLocal {
     @Override
     public void salvar(Empresa empresa) {
     }
+
+    @Override
+    public void atualizar(Empresa empresa) {
+    }
+
+    @Override
+    public Empresa buscar(Long id) {
+        return null;
+    }
+
+    @Override
+    public void apagar(Empresa empresa) {
+    }  
+    
 }

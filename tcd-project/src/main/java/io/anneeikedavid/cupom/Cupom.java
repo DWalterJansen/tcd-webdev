@@ -98,4 +98,8 @@ public class Cupom implements Serializable {
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
+    
+    public Boolean verificarCupom() {
+        return true; // TODO: Falta implementar
+    }
 }

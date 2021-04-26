@@ -92,4 +92,8 @@ public class Item implements Serializable {
     public void setPedido(Pedido pedido) {
         this.pedido = pedido;
     }
+    
+    public BigDecimal calcularPreco(){
+        return null; // TODO: Falta implementar
+    }
 }

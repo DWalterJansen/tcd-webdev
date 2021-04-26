@@ -22,4 +22,17 @@ public class CupomBean implements CupomBeanLocal {
     @Override
     public void salvar(Cupom cupom) {
     }
+
+    @Override
+    public void atualizar(Cupom cupom) {
+    }
+
+    @Override
+    public Cupom buscar(Long id) {
+        return null;
+    }
+
+    @Override
+    public void apagar(Cupom cupom) {
+    }
 }

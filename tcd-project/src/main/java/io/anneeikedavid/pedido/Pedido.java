@@ -152,4 +152,8 @@ public class Pedido implements Serializable {
     public void setItens(List<Item> itens) {
         this.itens = itens;
     }
+    
+    public BigDecimal calcularValorTotal() {
+        return null; // TODO: Falta implementar
+    }
 }

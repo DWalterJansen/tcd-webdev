@@ -22,4 +22,17 @@ public class EnderecoBean implements EnderecoBeanLocal {
     @Override
     public void salvar(Endereco endereco) {
     }
+
+    @Override
+    public void atualizar(Endereco endereco) {
+    }
+
+    @Override
+    public Endereco buscar(Long id) {
+        return null;
+    }
+
+    @Override
+    public void apagar(Endereco endereco) {
+    }
 }

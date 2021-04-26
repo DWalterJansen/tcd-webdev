@@ -5,6 +5,8 @@
  */
 package io.anneeikedavid.pedido;
 
+import io.anneeikedavid.item.Item;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -14,12 +16,30 @@ import javax.persistence.PersistenceContext;
  * @author David Jansen <davidwalterjansen@gmail.com>
  */
 @Stateless
-public class NewSessionBean implements NewSessionBeanLocal {
+public class PedidoBean implements PedidoBeanLocal {
 
     @PersistenceContext
     EntityManager entityManager;
 
     @Override
     public void salvar(Pedido pedido) {
+    }
+
+    @Override
+    public void atualizar(Pedido pedido) {
+    }
+
+    @Override
+    public Pedido buscar(Long id) {
+        return null;
+    }
+
+    @Override
+    public void apagar(Pedido pedido) {
+    }    
+
+    @Override
+    public List<Item> buscarItens(Pedido pedido) {
+        return null;
     }
 }

@@ -202,4 +202,8 @@ public class Empresa implements Serializable {
     public void setCupons(List<Cupom> cupons) {
         this.cupons = cupons;
     }
+    
+    public BigDecimal calcularPrecoEntrega(Integer distanciaMetros) {
+        return null; // TODO: Falta implementar
+    }
 }

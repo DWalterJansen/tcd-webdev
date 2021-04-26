@@ -15,5 +15,11 @@ import javax.ejb.Local;
 public interface CategoriaBeanLocal {
 
     void salvar(Categoria categoria);
+
+    void atualizar(Categoria categoria);
+
+    Categoria buscar(Long id);
+
+    void apagar(Categoria categoria);
     
 }

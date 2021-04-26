@@ -22,4 +22,18 @@ public class ItemBean implements ItemBeanLocal {
     @Override
     public void Salvar(Item item) {
     }
+
+    @Override
+    public void atualizar(Item item) {
+    }
+    
+    @Override
+    public Item buscar(Long id) {
+        return null;
+    }
+
+    @Override
+    public void apagar(Item item) {
+    }
+    
 }
