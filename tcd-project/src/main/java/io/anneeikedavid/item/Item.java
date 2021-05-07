@@ -50,7 +50,7 @@ public class Item implements Serializable {
         fetch = FetchType.LAZY,
         cascade = CascadeType.ALL
     )
-    @JoinColumn(name = "produto_id")
+    @JoinColumn(name = "pedido_id")
     private Pedido pedido;
 
     public Long getId() {
