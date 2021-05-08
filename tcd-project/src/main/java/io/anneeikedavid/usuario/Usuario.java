@@ -31,9 +31,15 @@ public class Usuario implements Serializable {
     
     @Column(length = 100)
     private String nome;
+
+    @Column(length = 15)
+    private String telefone;
     
     @Column()
     private String senha;
+
+    @Column(length = 5)
+    private String group;
     
     //empresa
     @OneToOne(mappedBy = "usuario")
@@ -63,12 +69,28 @@ public class Usuario implements Serializable {
         this.nome = nome;
     }
 
+        public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.nome = telefone;
+    }
+
     public String getSenha() {
         return senha;
     }
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
     }
 
     public Empresa getEmpresa() {

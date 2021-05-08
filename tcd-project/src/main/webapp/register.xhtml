@@ -16,12 +16,13 @@
                            <a class="logo" href="home.xhtml">
                                <img src="resources/images/logo.png" alt="logo iPet" />
                            </a>
-                           <p:inputText placeholder="Nome da Empresa" />
-                           <p:inputText placeholder="Telefone" />
-                           <p:inputText placeholder="CNPJ" />
-                           <p:inputText placeholder="Email" />
-                           <p:inputText placeholder="Senha de Acesso" />
-                           <p:button class="router btn" href="#" value="Entrar" />
+                           <p:inputText placeholder="Nome da Empresa" id="empresa" value="#{newUserController.user.empresa}"/>
+                           <p:inputText placeholder="Telefone" id="telefone" value="#{newUserController.user.telefone}" />
+                           <p:inputText placeholder="Nome" id="nome" value="#{newUserController.user.nome}" />
+                           <p:inputText placeholder="Tipo de Usuário" id="group" value="#{newUserController.user.group}" />
+                           <p:inputText placeholder="Email" id="email" value="#{newUserController.user.email}" />
+                           <p:inputText placeholder="Senha de Acesso" id="senha" value="#{newUserController.user.senha}" />
+                           <p:commandButton value="Salvar" action="#{newUserController.user.save()}" />
                            <p class="register-login">Já possui conta?
                                <a href="login.xhtml">
                                   Entre agora
