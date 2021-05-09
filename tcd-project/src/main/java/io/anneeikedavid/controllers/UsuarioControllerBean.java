@@ -5,13 +5,20 @@
  */
 package io.anneeikedavid.controllers;
 
+import io.anneeikedavid.empresa.Empresa;
 import io.anneeikedavid.empresa.EmpresaBeanLocal;
+import io.anneeikedavid.services.DataServiceBeanLocal;
 import io.anneeikedavid.usuario.Usuario;
 import io.anneeikedavid.usuario.UsuarioBeanLocal;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import java.util.Optional;
+import javax.annotation.PostConstruct;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
+import javax.security.enterprise.SecurityContext;
+import javax.servlet.ServletException;
 
 /**
  *
@@ -20,35 +27,54 @@ import javax.inject.Inject;
 @Named(value = "usuarioControllerBean")
 @SessionScoped
 public class UsuarioControllerBean implements Serializable {
+    
+    @Inject
+    DataServiceBeanLocal dataService;
 
-    private Usuario usuario;
-    private Boolean isLogado;
+    @Inject
+    SecurityContext securityContext;
+
+    @Inject
+    FacesContext facesContext;
     
     @Inject
     UsuarioBeanLocal usuarioBeanLocal;
     
     @Inject
     EmpresaBeanLocal empresaBeanLocal;
-    /**
-     * Creates a new instance of UsuarioControllerBean
-     */
+    
+    private Optional<Usuario> usuario;
+    private Empresa empresa;
+    
+    
+    @PostConstruct
+    public void initialize() {
+        String email = securityContext.getCallerPrincipal().getName();
+        this.usuario = dataService.getUsuario(email);
+        this.usuario.ifPresent(user -> {
+            this.empresa = usuario.get().getEmpresa();
+        });
+    }
+    
     public UsuarioControllerBean() {
     }
     
-    public Boolean login(String email, String senha) {
-        return true; // TODO: Falta implementar
+    public Usuario getCurrentUser() {
+        return usuario.orElse(null);
     }
-    
-    public Boolean logout(){
-        return true; // TODO: Falta implementar
+
+    public boolean isAuthenticated() {
+        return securityContext.getCallerPrincipal() != null;
     }
-    
-    public Boolean realizarCadastro(Usuario usuario) {
-        return true; // TODO: Falta implementar
+
+    public boolean isAdmin() {
+        return securityContext.isCallerInRole("admin");
     }
-    
-    public Boolean atualizarCadastro(Usuario usuario) {
-        return true; // TODO: Falta implementar
+
+    public String logout() throws ServletException {
+        facesContext.getExternalContext()
+                .invalidateSession();
+        return "/login?faces-redirect=true";
     }
     
 }

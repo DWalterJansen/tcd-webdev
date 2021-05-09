@@ -21,18 +21,22 @@ public class CategoriaBean implements CategoriaBeanLocal {
 
     @Override
     public void salvar(Categoria categoria) {
+        entityManager.persist(categoria);
     }
 
     @Override
     public void atualizar(Categoria categoria) {
+        entityManager.merge(categoria);
     }
 
     @Override
     public Categoria buscar(Long id) {
-        return null;
+        Categoria categoria = entityManager.find(Categoria.class, id);
+        return categoria;
     }
 
     @Override
     public void apagar(Categoria categoria) {
+        entityManager.remove(categoria);
     }
 }

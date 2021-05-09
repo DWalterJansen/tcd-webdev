@@ -1,8 +1,7 @@
 package io.anneeikedavid.controllers;
 
+import io.anneeikedavid.services.DataServiceBeanLocal;
 import io.anneeikedavid.usuario.Usuario;
-import io.anneeikedavid.DataServiceBeanLocal;
-import java.util.List;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -16,9 +15,6 @@ public class NewUserController {
     
     private Usuario user;
 
-    /**
-     * Creates a new instance of NewUserController
-     */
     public NewUserController() {
         user = new Usuario();
     }
@@ -35,12 +31,7 @@ public class NewUserController {
     //</editor-fold>
     
     public String save() {
-        user = dataService.createUser(
-                user.GetEmpresa(),
-                user.getTelefone(),
-                user.getNome(), 
-                user.getSenha(), 
-                user.getGroup());
+        // user = dataService.criarUsuario(email, nome, telegone, password, group, empresa);
 
         return "/webapp/login.xhtml";
     }

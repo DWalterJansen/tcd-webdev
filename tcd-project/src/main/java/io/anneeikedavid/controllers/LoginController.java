@@ -20,7 +20,7 @@ import javax.validation.constraints.NotEmpty;
 public class LoginController {
 
     @NotEmpty
-    private String username;
+    private String email;
 
     @NotEmpty
     private String password;
@@ -32,12 +32,12 @@ public class LoginController {
     SecurityContext securityContext;
 
     //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -68,7 +68,7 @@ public class LoginController {
         return securityContext.authenticate(
                 (HttpServletRequest) ec.getRequest(),
                 (HttpServletResponse) ec.getResponse(),
-                AuthenticationParameters.withParams().credential(new UsernamePasswordCredential(username, password)));
+                AuthenticationParameters.withParams().credential(new UsernamePasswordCredential(email, password)));
     }
 
     private ExternalContext getExternalContext() {

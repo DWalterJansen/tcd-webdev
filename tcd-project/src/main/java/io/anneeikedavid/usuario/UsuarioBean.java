@@ -21,24 +21,22 @@ public class UsuarioBean implements UsuarioBeanLocal {
 
     @Override
     public void salvar(Usuario usuario) {
+        entityManager.persist(usuario);
     }
 
     @Override
     public void atualizar(Usuario usuario) {
+        entityManager.merge(usuario);
     }
     
     @Override
     public void apagar(Usuario usuario) {
+        entityManager.remove(usuario);
     }
     
     @Override
     public Usuario buscar(Long id) {
-        return null;
-    }
-
-    @Override
-    public Boolean verificarDadosLogin(String email, String senha) {
-        return null;
-    }
-    
+        Usuario usuario = entityManager.find(Usuario.class, id);
+        return usuario;
+    }    
 }

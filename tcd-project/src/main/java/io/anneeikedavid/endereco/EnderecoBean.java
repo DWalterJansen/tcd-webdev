@@ -21,18 +21,22 @@ public class EnderecoBean implements EnderecoBeanLocal {
 
     @Override
     public void salvar(Endereco endereco) {
+        entityManager.persist(endereco);
     }
 
     @Override
     public void atualizar(Endereco endereco) {
+        entityManager.merge(endereco);
     }
 
     @Override
     public Endereco buscar(Long id) {
-        return null;
+        Endereco endereco = entityManager.find(Endereco.class, id);
+        return endereco;
     }
 
     @Override
     public void apagar(Endereco endereco) {
+        entityManager.remove(endereco);
     }
 }

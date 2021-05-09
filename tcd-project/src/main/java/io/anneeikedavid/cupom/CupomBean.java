@@ -21,18 +21,22 @@ public class CupomBean implements CupomBeanLocal {
 
     @Override
     public void salvar(Cupom cupom) {
+        entityManager.persist(cupom);
     }
 
     @Override
     public void atualizar(Cupom cupom) {
+        entityManager.merge(cupom);
     }
 
     @Override
     public Cupom buscar(Long id) {
-        return null;
+        Cupom cupom = entityManager.find(Cupom.class, id);
+        return cupom;
     }
 
     @Override
     public void apagar(Cupom cupom) {
+        entityManager.remove(cupom);
     }
 }

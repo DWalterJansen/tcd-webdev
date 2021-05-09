@@ -9,7 +9,6 @@ import io.anneeikedavid.categoria.Categoria;
 import io.anneeikedavid.empresa.Empresa;
 import io.anneeikedavid.item.Item;
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

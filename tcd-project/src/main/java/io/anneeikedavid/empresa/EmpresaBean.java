@@ -21,19 +21,23 @@ public class EmpresaBean implements EmpresaBeanLocal {
 
     @Override
     public void salvar(Empresa empresa) {
+        entityManager.persist(empresa);
     }
 
     @Override
     public void atualizar(Empresa empresa) {
+        entityManager.merge(empresa);
     }
 
     @Override
     public Empresa buscar(Long id) {
-        return null;
+        Empresa empresa = entityManager.find(Empresa.class, id);
+        return empresa;
     }
 
     @Override
     public void apagar(Empresa empresa) {
+        entityManager.remove(empresa);
     }  
     
 }

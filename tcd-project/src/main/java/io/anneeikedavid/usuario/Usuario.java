@@ -12,12 +12,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 
 /**
  *
  * @author David Jansen <davidwalterjansen@gmail.com>
  */
+@NamedQueries({
+    @NamedQuery(name = "Usuario.findByEmail", 
+            query = "SELECT u FROM Usuario u WHERE u.email = :email"),
+})
 @Entity
 public class Usuario implements Serializable {
 
@@ -35,16 +41,31 @@ public class Usuario implements Serializable {
     @Column(length = 15)
     private String telefone;
     
-    @Column()
-    private String senha;
-
-    @Column(length = 5)
+    @Column(name = "senha", nullable = false)
+    private String password;
+    
+    @Column(name = "usuario_grupo", nullable = false)
     private String group;
     
     //empresa
     @OneToOne(mappedBy = "usuario")
     private Empresa empresa;
+    
+    //<editor-fold defaultstate="collapsed" desc="Constructors">
+    public Usuario() {}
 
+    public Usuario(String email, String nome, String telegone, String password, 
+            String group, Empresa empresa) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.password = password;
+        this.group = group;
+        this.empresa = empresa;
+    }
+    //</editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
     public Long getId() {
         return id;
     }
@@ -69,20 +90,20 @@ public class Usuario implements Serializable {
         this.nome = nome;
     }
 
-        public String getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
     public void setTelefone(String telefone) {
-        this.nome = telefone;
+        this.telefone = telefone;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getGroup() {
@@ -100,4 +121,5 @@ public class Usuario implements Serializable {
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
+    //</editor-fold>
 }

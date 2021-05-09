@@ -21,8 +21,4 @@ public interface UsuarioBeanLocal {
     void apagar(Usuario usuario);
 
     Usuario buscar(Long id);
-
-    Boolean verificarDadosLogin(String email, String senha);
-
-    
 }

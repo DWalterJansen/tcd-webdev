@@ -33,20 +33,22 @@
         <welcome-file>login.xhtml</welcome-file>
     </welcome-file-list>
 
-        <security-role>
+    <security-role>
         <description>administrador do sistema</description>
         <role-name>admin</role-name>
     </security-role>
     
+    <!--
     <security-role>
-        <description>usuario altenticado como comum</description>
+        <description>usuario autenticado como comum</description>
         <role-name>user</role-name>
     </security-role>
+    -->
     
     <security-constraint>
         <display-name>Papel Admin</display-name>
         <web-resource-collection>
-            <web-resource-name>Todas as Paginas em app</web-resource-name>
+            <web-resource-name>Todas as Paginas em admin</web-resource-name>
             <url-pattern>/admin/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
@@ -54,6 +56,7 @@
         </auth-constraint>
     </security-constraint>
     
+    <!--
     <security-constraint>
         <display-name>Papel Usuario</display-name>
         <web-resource-collection>
@@ -65,6 +68,12 @@
             <role-name>user</role-name>
         </auth-constraint>
     </security-constraint>
+    -->
 
+    <!--<error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/templates/forbidden.xhtml</location>
+    </error-page>
+    -->
 
 </web-app>

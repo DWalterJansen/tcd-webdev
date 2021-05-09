@@ -20,20 +20,23 @@ public class ItemBean implements ItemBeanLocal {
     EntityManager entityManager;
 
     @Override
-    public void Salvar(Item item) {
+    public void salvar(Item item) {
+        entityManager.persist(item);
     }
 
     @Override
     public void atualizar(Item item) {
+        entityManager.merge(item);
     }
     
     @Override
     public Item buscar(Long id) {
-        return null;
+        Item item = entityManager.find(Item.class, id);
+        return item;
     }
 
     @Override
     public void apagar(Item item) {
+        entityManager.remove(item);
     }
-    
 }

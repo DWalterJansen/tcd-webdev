@@ -3,14 +3,14 @@
   <!-- Define Persistence Unit -->
   <persistence-unit name="tcdDS">
     <jta-data-source>java:/tcdDS</jta-data-source>
-    <class>io.anneeikedavid.usuario.Usuario</class>
-    <class>io.anneeikedavid.empresa.Empresa</class>
-    <class>io.anneeikedavid.endereco.Endereco</class>
-    <class>io.anneeikedavid.produto.Produto</class>
-    <class>io.anneeikedavid.pedido.Pedido</class>
-    <class>io.anneeikedavid.categoria.Categoria</class>
-    <class>io.anneeikedavid.item.Item</class>
-    <class>io.anneeikedavid.cupom.Cupom</class>
+    <class>io.anneeikedavid.security.endereco.Endereco</class>
+    <class>io.anneeikedavid.security.usuario.Usuario</class>
+    <class>io.anneeikedavid.security.item.Item</class>
+    <class>io.anneeikedavid.security.pedido.Pedido</class>
+    <class>io.anneeikedavid.security.empresa.Empresa</class>
+    <class>io.anneeikedavid.security.categoria.Categoria</class>
+    <class>io.anneeikedavid.security.cupom.Cupom</class>
+    <class>io.anneeikedavid.security.produto.Produto</class>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
     </properties>

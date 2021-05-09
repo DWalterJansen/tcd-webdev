@@ -20,12 +20,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 /**
  *
  * @author David Jansen <davidwalterjansen@gmail.com>
  */
+@NamedQueries({
+    @NamedQuery(
+        name="ItemFromPedido.findAll",
+        query="SELECT i FROM Pedido p JOIN p.itens i WHERE p.id = :id"
+    ),
+})
 @Entity
 public class Pedido implements Serializable {
 

@@ -1,4 +1,4 @@
-package io.anneeikedavid;
+package io.anneeikedavid.security;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.faces.annotation.FacesConfig;
@@ -12,6 +12,8 @@ import javax.security.enterprise.identitystore.Pbkdf2PasswordHash;
 @DatabaseIdentityStoreDefinition(
         dataSourceLookup = "java:/tcdDS",
         callerQuery = "select senha from usuario "
+        + "where email = ?",
+        groupsQuery = "select usuario_grupo from usuario "
         + "where email = ?",
         hashAlgorithm = Pbkdf2PasswordHash.class,
         hashAlgorithmParameters = {

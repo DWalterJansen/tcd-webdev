@@ -14,7 +14,7 @@ import javax.ejb.Local;
 @Local
 public interface ItemBeanLocal {
 
-    void Salvar(Item item);
+    void salvar(Item item);
 
     void atualizar(Item item);
     

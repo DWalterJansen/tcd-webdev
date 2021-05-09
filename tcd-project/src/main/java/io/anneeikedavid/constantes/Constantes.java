@@ -10,11 +10,11 @@ package io.anneeikedavid.constantes;
  * @author David Jansen <davidwalterjansen@gmail.com>
  */
 public class Constantes {
-    public String PAGO = "pago";
-    public String AGUARDANDO_PAGAMENTO = "aguardando pagamento";
-    public String SAIU_PARA_ENTREGA = "saiu para entrega";
-    public String ENTREGUE = "entregue";
+    public static final String PAGO = "pago";
+    public static final String AGUARDANDO_PAGAMENTO = "aguardando pagamento";
+    public static final String SAIU_PARA_ENTREGA = "saiu para entrega";
+    public static final String ENTREGUE = "entregue";
     
-    public String PAG_DINHEIRO = "pagamento em dinheiro";
-    public String PAG_CARTAO = "pagamento em cartao";
+    public static final String PAG_DINHEIRO = "pagamento em dinheiro";
+    public static final String PAG_CARTAO = "pagamento em cartao";
 }

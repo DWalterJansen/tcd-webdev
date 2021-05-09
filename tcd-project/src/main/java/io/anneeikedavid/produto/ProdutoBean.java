@@ -21,29 +21,42 @@ public class ProdutoBean implements ProdutoBeanLocal {
 
     @Override
     public void salvar(Produto produto) {
+        entityManager.persist(produto);
     }
 
     @Override
     public void atualizar(Produto produto) {
+        entityManager.merge(produto);
     }
 
     @Override
     public Produto buscar(Long id) {
-        return null;
+        Produto produto = entityManager.find(Produto.class, id);
+        return produto;
     }
 
     @Override
     public void apagar(Produto produto) {
+        entityManager.remove(produto);
     }
 
     @Override
     public void aumentarQuantidadeEstoque(Produto produto, Integer quantidade) {
+        Integer novaQuantidade = produto.getQuantidadeEstoque() + quantidade;
+        produto.setQuantidadeEstoque(novaQuantidade);
+        entityManager.merge(produto);
     }
     
     @Override
     public Boolean diminuirQuantidadeEstoque(Produto produto, Integer quantidade) {
-        return true;
+        Integer novaQuantidade = produto.getQuantidadeEstoque() - quantidade;
+        if (novaQuantidade < 0) {
+            return false;
+        }
+        else {
+            produto.setQuantidadeEstoque(novaQuantidade);
+            entityManager.merge(produto);
+            return true;
+        }
     }
-    
-    
 }
