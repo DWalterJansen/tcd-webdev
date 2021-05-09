@@ -1,4 +1,4 @@
-package io.anneeikedavid.security;
+package io.anneeikedavid;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.faces.annotation.FacesConfig;
