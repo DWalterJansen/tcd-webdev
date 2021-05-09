@@ -18,6 +18,7 @@
 *******************************************************************************/
 :root {
     --blue-color: #3E6CC2;
+    --black-color: #000000;
     --yellow-color: #FBBC05;
 }
 /*******************************************************************************
@@ -264,7 +265,7 @@ body .banner-opinion .container .ui-card .ui-card-body {
     margin-bottom: 0.5rem;
 }
 /* Card Content*/
-.header-card .card-content p {
+.card-content p {
     text-align: justify;
 }
 /*******************************************************************************
