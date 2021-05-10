@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    template="./../WEB-INF/templates/adminTemplate.xhtml"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    <ui:define name="content">
+        <h1 class="title-item">Início</h1>
+        <p:card id="panel-personalcard">
+            <div class="card-content">
+                <div class="personal-datas">
+                    <header class="header-personalcard">
+                         <p:avatar size="xlarge" shape="circle">
+                             <img src="../resources/images/avatar/petlove.png" alt="Pet Love"/>
+                         </p:avatar>
+                         <div class="personal-data-content">
+                             <h1>Pet Love</h1>
+                             <p>10.864.846/0001-23</p>
+                         </div>
+                     </header>
+                    <p>
+                         Encontre tudo que seu pet precisa na Petlove, o maior petshop online do Brasil! Encontre mais de 15 mil produtos para seu Pet com os Melhores Preços, as Principais Marcas em até 3x sem juros.
+                     </p>
+                </div>
+            <div class="personal-score">
+                <div class="score">
+                    <p>Média Geral</p>
+                    <p class="score-number">5.0</p>
+                    <p:rating value="5" readonly="true" />
+                    <p>42 Avaliações</p>
+                </div>
+                <div class="text-score">
+                    <h2>Encanto de Pet Shop</h2>
+                    <p>Última avaliação: </p>
+                    <p>
+                        <blockquote>
+                            <cite>
+                                "Gosto da variedade de produtos que o site dispõe. O prazo de entrega é cumprido normalmente.
+                            </cite>
+                        </blockquote>
+                    </p>
+                </div>
+            </div> 
+            </div>
+            
+            <footer>
+                <hr />
+                <p:button icon="fa fa-pen" value="Editar Informações" styleClass="ui-button-flat" />
+            </footer>
+           
+        </p:card>
+        <section class="section-config">
+            <div class="section-cupom">
+                <h2>Promoções em Vigor</h2>
+                <p:card>
+                    <div>
+                        <p:inputText id="codecoupon-1" value="NEWUSER15" styleClass="p-d-blocky" readonly="true"></p:inputText>
+                        <p>Cupom de 15% de desconto disponível para novos usuários.</p>
+                    </div>
+                    <div>
+                        <p:inputText id="codecoupon-2" value="LOVEFALL10" styleClass="p-d-blocky" readonly="true"></p:inputText>
+                        <p>Cupom de 10% de desconto na linha de produtos de outono.</p>
+                    </div>
+                    <footer>
+                        <hr />
+                        <p:button icon="fa fa-pen" value="Editar Informações" styleClass="ui-button-flat" />
+                    </footer>
+                </p:card>
+            </div>
+            <div class="section-entrega">
+                <h2>Configurações de Entrega</h2>
+                <p:card>
+                    <div>
+                        <p:outputLabel for="time">Tempo médio de entrega</p:outputLabel>
+                        <p:inputText id="time" value="60 minutos" styleClass="p-d-blocky" readonly="true"></p:inputText>
+                    </div>
+                    <div>
+                        <p:outputLabel for="shipping">Valor mínimo do frete</p:outputLabel>
+                        <p:inputText id="shipping" value="3.00" styleClass="p-d-blocky" readonly="true"></p:inputText>
+                    </div>
+                    <footer>
+                        <hr />
+                        <p:button icon="fa fa-pen" value="Editar Informações" styleClass="ui-button-flat" />
+                    </footer>
+                </p:card>
+            </div>
+        </section>
+        <section class="section-perfomance">
+            <div class="section-result">
+                <h2>Resultados</h2>
+                <p:card>
+                    <h3>Pedidos</h3>
+                    <div class="data">
+                        <div class="data-1">
+                            <p class="number">100</p>
+                            <p>Esta semana</p>
+                        </div>
+                        <div class="data-1">
+                            <p class="number">75</p>
+                            <p>Semana passada</p>
+                        </div>
+                    </div>
+                    <p>Produto mais vendido</p>
+                    <p class="target">Banho, Tosa e Higienização</p>
+                </p:card>
+            </div>
+            <div class="section-revenues">
+                <h2>Faturamento da Semana</h2>
+                <p:card>
+                   <h3>Faturamento</h3>
+                    <div class="data">
+                        <div class="data-1">
+                            <p class="number">100</p>
+                            <p>Esta semana</p>
+                        </div>
+                        <div class="data-2">
+                            <p class="number">75</p>
+                            <p>Semana passada</p>
+                        </div>
+                    </div>
+                </p:card>
+            </div>
+        </section>
+    </ui:define>
+
+</ui:composition>

@@ -1,213 +1,352 @@
-/********************************************************************************
-*                     ORGANIZAÇÃO DO ARQUIVO STYLE                          *
-*********************************************************************************
-* 1 - Declaração das variáveis utilizadas
-* 2 - Importação das fontes que serão utilizadas
-* 3 - Formatação padrão dos componentes (Ex.: h1, button, body, etc)
-* 4 - Header
-* 5 - Footer
-* 6 - Banner Principal
-* 7 - Benefits
-* 8 - Team
+/*                                                                              
+    author: Anne Caroline (@carolinepsantos)
+    project: tcd-webdev
 */
-/*
-    1 - Declaração das variáveis utilizadas                       
+/*******************************************************************************
+*                                       MENU                                   * 
+********************************************************************************
+* 1 - Definição das variáveis utilizadas
+* 2 - Definição das propriedades padrões (exemplo: *, body, classes comuns)
+* 3 - Definição dos componentes do template.xhtml
+* 4 - Definição dos componentes da home.xhtml
+* 5 - Definição dos componentes da knowMore.xhtml
+* 6 - Definição dos componentes do login.xhtml
+* 7 - Definição dos componentes do register.xhtml
 */
+/*******************************************************************************
+    1 - Definição das variáveis utilizadas
+*******************************************************************************/
 :root {
-    --black-color: #000000;
     --blue-color: #3E6CC2;
-    --gray-color: #5E5E5E;
-    --white-color: #FFFFFF;
+    --black-color: #000000;
     --yellow-color: #FBBC05;
 }
-/*
-    2 - Importação das fontes que serão utilizadas                       
-*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-/*
-    3 - Formatação padrão dos componentes (Ex.: h1, button, body, etc)                      
-*/
+/*******************************************************************************
+    2 - Definição das propriedades padrões (exemplo: *, body, classes comuns)
+*******************************************************************************/
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-decoration: none;
-    box-sizing: border-box;
-}
-container {
-    width: 100%;
-    margin: 0 auto;
-}
-/*
-    4 - Header                     
-*/
-header {
-    padding: 1rem 5rem;
-    height: 100px;
-}
-header .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* Navbar */
-header .nav-tabs {
-    display: block;
-    justify-content: center;
-    width: 100%;
-}
-header .nav-tabs ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    line-height: 40px;
     list-style: none;
 }
-header .nav-tabs ul li {
-    display: inline-block;
-    text-align: center;
-    align-self: center;
-    width: 100px;
-    height: 40px;
-    float: left;
-    margin: 0rem 1rem;
-}
-header .nav-tabs ul li a,
-header .nav-tabs ul li a:hover,
-header .nav-tabs ul li a:active,
-header .nav-tabs ul li a:visited{
-    text-decoration: none;
-}
-/*
-    5 - Footer                     
-*/
-footer {
-    padding: 1rem 5rem;
-    height: 150px;  
-}
-footer .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-footer .footer-content {
-    text-align: center;
+.container {
     width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
 }
-footer .footer-content p { 
-    padding: 0.25rem 0;
-}
-/*
-    6 - Banner Principal                   
-*/
+/* Banner Principal */
 .banner-principal {
     display: block;
     width: 100%;
     height: 400px;
-    background: var(--blue-color);
     text-align: center;
-    padding: 0 0.5rem;
+    background: var(--blue-color);
+    color: white;
+    padding: 0 1rem;
 }
 .banner-principal .container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100%
+    justify-content: space-between;
+    height: 100%;
 }
-.banner-principal .container .banner-image {
-    width: 50%;
-}
-.banner-principal .container .banner-image img {
-    width: 450px;
-}
+.banner-principal .container .banner-image,
 .banner-principal .container .banner-content {
     width: 50%;
-    justify-content: center;
-    align-items: center;
 }
-.banner-principal .container .banner-content .subtitle {
-    margin: 1rem 0;
+/* Banner Principal Image */
+.banner-principal .container .banner-image img {
+    max-height: 380px;
 }
+/* Banner Principal Content */
 .banner-principal .container .banner-content .title,
 .banner-principal .container .banner-content .subtitle {
     max-width: 500px;
+    text-align: justify;
 }
-/*
-    7 - Benefits            
-*/
-.benefits {
-    display: block;
-    width: 100%;
-    height: 500px;
-    padding: 0 0.5rem;
+.banner-principal .container .banner-content .title {
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
 }
-.benefits .container {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+/* Buttons */
+body .ui-button {
+    border-radius: 3px;
+    font-size: 1rem;
+    color: white;
+    background: var(--blue-color);
+    border: 1px solid var(--blue-color);
 }
-.benefits .container .benefits-title {
-    display: block;
-    width: 100%;
-}
-.benefits .container .benefits-title h1 {
-    margin: 25px 0;
-}
-.benefits .container .benefits-enterprise {
-    display: flex;
-}
-.benefits .container .row {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-.benefits .container .row .col {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 5%;
-    margin: 0.25rem 0;
-}
-.benefits .container .benefits-image img {
-    max-height: 200px;
-    max-width: 250px;
-}
-.benefits .container  .benefits-content .blue-title {
+body .ui-button.ui-button-flat {
+    background: white;
     color: var(--blue-color);
-    font-weight: bold;
-    text-align: start;
-    padding-bottom: 0.5rem;
 }
-.benefits .container  .benefits-content .yellow-title {
-    color: var(--yellow-color);
-    font-weight: bold;
-    text-align: start;
-    padding-bottom: 0.5rem;
+/*******************************************************************************
+    3 - Definição dos componentes do template.xhtml
+*******************************************************************************/
+/* 3.1 - Header */
+header {
+    height: 100px;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* 3.1.1 Logo */
+header .header-logo .image-logo {
+    height: 80px;
+}
+/* 3.1.2 Navbar */
+header .nav-tabs ul {
+    display: flex;
+    justify-content: flex-end;
+}
+header .nav-tabs ul .nav-links {
+    display: inline-block;
+    float: left;
+    margin: 0 1.5rem;
+}
+/* 3.2 - Footer */
+footer {
+    height: 120px;
+    background: var(--blue-color);
+    color: white;
+}
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* 3.2.1 Logo */
+footer .footer-logo .image-logo {
+    height: 100px;
+}
+/* 3.2.2 Content */
+footer .footer-content {
+    display: inline-block;
+    float: left;
+}
+footer .footer-content p {
+    padding: 0.25rem 0;
+}
+footer .footer-content #copy span {
+    font-weight: 700;
+}
+/*******************************************************************************
+    4 - Definição dos componentes da home.xhtml
+*******************************************************************************/
+/* 4.1 - Statical Info */
+.statical-info {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    box-shadow: 0 4px 3px -2px rgba(0, 0, 0, 0.2); 
+}
+.statical-info .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.statical-info .container .info {
+    text-align: center;
+    padding: 0.5rem 0;
+}
+.statical-info .container .info h2 {
+    color: var(--blue-color);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.statical-info .container .info p {
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+/* 4.2 - Informational Banner */
+.informational-banner {
+    margin: 2rem 0;
+    display: block;
+    text-align: center;
+}
+.informational-banner h2 {
+    color: var(--blue-color);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.informational-banner p {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    width: 80%;
+}
+body .informational-banner .ui-button {
+    background: var(--yellow-color);
+    border: 1px solid var(--yellow-color);
+}
+/* 4.3 - Banner Pets */
+.banner-pets {
+    width: 100%;
+    height: 300px;
+    background: rgba(229, 170, 15, 0.25);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-pets .container {
+    display: block;
+}
+.banner-pets h2 {
+    display: block;
+    color: var(--blue-color);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.banner-pets .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body .banner-pets .ui-inputfield {
+    width: 300px;
+    margin-left: 1rem;
+}
+body .banner-pets .notice{
+    display: flex;
+    align-self: center;
+    background: var(--blue-color);
+    border: 1px solid var(--blue-color);
 }
 
-/*
-    8 - Team            
-*/
+/* 4.4 - Banner Opinion */
+.banner-opinion {
+    display: block;
+    width: 100%;
+    margin: 1rem 0; 
+}
+.banner-opinion .title {
+    text-align: center;
+    color: var(--blue-color);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.banner-opinion .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+body .banner-opinion .container .ui-card .ui-card-body {
+    padding: 0.5rem;
+    width: 300px;
+}
+.banner-opinion .container .header-card {
+    display: flex;
+}
+/* Client Data */
+.banner-opinion .container .header-card .client-data {
+    margin-left: 1rem;
+}
+.header-card .client-data .name {
+    color: var(--blue-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
+.header-card .client-data .job {
+    font-size: 0.8rem;
+    font-weight: 100;
+    margin-bottom: 0.5rem;
+}
+.header-card .client-data .date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+/* Card Content*/
+.card-content p {
+    text-align: justify;
+}
+/*******************************************************************************
+    5 - Definição dos componentes da knowMore.xhtml
+*******************************************************************************/
+/* 5.1 - Benefits */
+.benefits {
+    margin: 1rem 0;
+    display: block;
+}
+/* Title */
+.benefits .benefits-title {
+    text-align: center;
+    color: var(--blue-color);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.benefits .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Cards */
+.benefits-content {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+.benefits-content .row {
+    width: 100%;
+}
+.benefits-card {
+    margin: 1rem 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+/* Text */
+.benefits-card .benefits-text {
+    text-align: start;
+    display: block;
+}
+.benefits-card .benefits-text .blue-text {
+    color: var(--blue-color);
+    margin-bottom: 0.5rem;
+}
+.benefits-card .benefits-text .yellow-text {
+    color: var(--yellow-color);
+    margin-bottom: 0.5rem;
+}
+.benefits-card .benefits-text p {
+    display: block;
+    float: left;
+}
+/* Image */
+.benefits-image {
+    width: 50%;
+    display: block;
+}
+/* 5.2 - Team */
 .team {
     display: block;
     width: 100%;
     height: 300px;
-    padding: 0 0.5rem;
+}
+/* Title */
+.team h2 {
+    text-align: center;
+    color: var(--blue-color);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 .team .container {
-    text-align: center;
-    justify-content: center;
+    display: flex;
     align-items: center;
-}
-.team .container .team-title {
-    display: block;
-    width: 100%;
-}
-.team .container .team-title h1 {
-    margin: 25px 0;
-    
+    justify-content: center;
 }
 .team .container .row {
+    width: 100%;
     display: grid;
     grid-template-columns: 33% 33% 33%;
 }
@@ -216,12 +355,135 @@ footer .footer-content p {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 0.5rem;
 }
-.team .container .img-team {
-    padding: 0 0.5rem;
+/* Image */
+.team .team-image {
+    display: block;
+    justify-content: center;
 }
-.team .container .img-team img {
-    max-height: 150px;
-    max-width: 150px;
+/* Content */
+.team .team-content {
+    display: block;
+    margin-left: 1.5rem
+}
+.team .team-content h3 {
+    text-align: start;
+    color: var(--blue-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.team .team-content .team-icon {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.team-content .team-icon .linkedin-icon {
+    color: var(--blue-color);
+}
+.team-content .team-icon .github-icon {
+    color: black;
+}
+/*******************************************************************************
+    6 - Definição dos componentes do login.xhtml
+*******************************************************************************/
+.login .container {
+    width: 100%;
+    height: 100%;
+}
+.l-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+.l-frame .ui-card {
+    background: rgba(255, 255, 255, 0.45);
+}
+.l-frame .ui-card .ui-card-content {
+    display: block;
+    width: 500px;
+    padding: 5% 10%;
+}
+.form-login .logo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-login .ui-inputfield {
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+.form-login .ui-button {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+}
+.form-login .login-register{
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    color: var(--black-color);
+    width: 100%;
+    margin-top: 20px;
+}
+.form-login .login-register  a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--blue-color);
+}
+/*******************************************************************************
+    7 - Definição dos componentes do register.xhtml
+*******************************************************************************/
+.register .container {
+    width: 100%;
+    height: 100%;
+}
+.r-center {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%); 
+}
+.r-frame .ui-card {
+    background: rgba(255, 255, 255, 0.45);
+}
+.r-frame .ui-card .ui-card-content {
+    display: block;
+    width: 500px;
+    padding: 5% 10%;
+}
+.form-register .logo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-register .ui-inputfield {
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+.form-register .ui-button {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+}
+.form-register .register-login{
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    color: var(--black-color);
+    width: 100%;
+    margin-top: 20px;
+}
+.form-register .register-login  a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--yellow-color);
 }

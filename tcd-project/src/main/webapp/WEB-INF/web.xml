@@ -4,21 +4,76 @@
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
     </context-param>
+
+    <context-param>
+        <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
+
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+
     <welcome-file-list>
         <welcome-file>home.xhtml</welcome-file>
+        <welcome-file>index.xhtml</welcome-file>
+        <welcome-file>login.xhtml</welcome-file>
     </welcome-file-list>
+
+    <security-role>
+        <description>administrador do sistema</description>
+        <role-name>admin</role-name>
+    </security-role>
+    
+    <!--
+    <security-role>
+        <description>usuario autenticado como comum</description>
+        <role-name>user</role-name>
+    </security-role>
+    -->
+    
+    <security-constraint>
+        <display-name>Papel Admin</display-name>
+        <web-resource-collection>
+            <web-resource-name>Todas as Paginas em admin</web-resource-name>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    
+    <!--
+    <security-constraint>
+        <display-name>Papel Usuario</display-name>
+        <web-resource-collection>
+            <web-resource-name>Pagina Inicial do Usuario</web-resource-name>
+            <url-pattern>/webapp/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+            <role-name>user</role-name>
+        </auth-constraint>
+    </security-constraint>
+    -->
+
+    <!--<error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/templates/forbidden.xhtml</location>
+    </error-page>
+    -->
+
 </web-app>

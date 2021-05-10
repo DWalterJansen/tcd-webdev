@@ -8,59 +8,66 @@
 
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <h:outputStylesheet name="css/typography.css"/>
-        <h:outputStylesheet name="css/style.css"/>
-        <h:outputStylesheet name="css/login.css"/>
-        <h:outputStylesheet name="css/register.css"/>
-        <h:outputStylesheet library="webjars" name="font-awesome/5.15.2/css/all-jsf.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>iPet</title>
+        <!-- favicon -->
         <link rel="shortcut icon" href="resources/images/favicon.png" />
+        <!-- SEO -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="iPet - Modernize o seu Pet Shop" />
+        <meta property="og:description" content="O iPet Enterprise oferece a você acesso aos dados dos pedidos, controle de estoque e venda, tudo isso online. Modernize o seu Pet Shop!"/>
+        <meta property="og:url" content=" " />
+        <meta property="og:image" content=" " />
+        <!-- css -->
+        <h:outputStylesheet name="css/style.css"/>
+        <!-- fontawesome-->
+        <h:outputStylesheet library="webjars" name="font-awesome/5.15.2/css/all-jsf.css" />
     </h:head>
 
     <h:body>
         <ui:insert name="body">
-            <div class="container">
-
-            </div>
+            <!-- Header -->
             <header>
                 <div class="container">
-                    <div class="header-title">
-                        <a href="#">
-                            <img class="logo" src="resources/images/logo.png" alt="logo iPet" />
+                    <div class="header-logo">
+                        <a href="home.xhtml">
+                            <img class="image-logo" src="resources/images/logo.png" alt="logo iPet" />
                         </a>
                     </div>
                     <ui:insert name="header">
                         <nav class="nav-tabs">
                             <ul>
-                                <li>
-                                    <a class="router" href="#">Saiba Mais</a>
+                                <li class="nav-links">
+                                    <p:button href="knowMore.xhtml" value="Saiba Mais" styleClass="ui-button-flat" />
+                                </li>
+                                <li class="nav-links">
+                                    <p:button href="login.xhtml" value="Entrar" styleClass="ui-button-flat" />
                                 </li>
                                 <li>
-                                    <a class="router" href="login.xhtml">Entrar</a>
-                                </li>
-                                <li>
-                                    <p:button class="router btn" href="register.xhtml" value="Cadastrar" />
+                                    <p:button href="register.xhtml" value="Cadastrar" />
                                 </li>
                             </ul>
                         </nav>
                     </ui:insert>
                 </div>
             </header>
-
+            
+            <!-- Conteúdo Principal -->
             <main>
                 <ui:insert name="content">Content</ui:insert>
             </main>
 
+            <!-- Footer -->
             <footer>
                 <ui:insert name="footer">
                     <div class="container">
-                        <div class="footer-title">
+                        <div class="footer-logo">
                             <a href="home.xhtml">
-                                <img class="logo" src="resources/images/logo-light.png" alt="logo light iPet" />
+                                <img class="image-logo" src="resources/images/logo-light.png" alt="logo light iPet" />
                             </a>
                         </div>
                         <div class="footer-content">
-                            <p class="copy">&copy; Copyright 2021 - <span class="logo">iPet</span></p>
+                            <p id="copy">&copy; Copyright 2021 - <span>iPet Enterprise</span></p>
                             <p>Todos os direitos reservados</p>
                             <p>79.897.738/0001-53 / Rua Mastim Napolitano, 934  - 62442</p>
                         </div>

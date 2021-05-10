@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pet Love | Dashboard</title>
+        <!-- favicon -->
+        <link rel="shortcut icon" href="../resources/images/favicon.png" />
+        <!-- SEO -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Pet Love - Dashboard" />
+        <meta property="og:description" content="O iPet Enterprise oferece a você acesso aos dados dos pedidos, controle de estoque e venda, tudo isso online. Modernize o seu Pet Shop!"/>
+        <meta property="og:url" content=" " />
+        <meta property="og:image" content=" " />
+        <!-- css -->
+        <h:outputStylesheet name="css/adminStyle.css"/>
+        <!-- fontawesome-->
+        <h:outputStylesheet library="webjars" name="font-awesome/5.15.2/css/all-jsf.css" />
+    </h:head>
+
+    <h:body>
+        <ui:insert name="header">
+            <header>
+                <div class="header-admin-logo">
+                    <a href="home.xhtml">
+                        <img class="image-logo" src="../resources/images/logo.png" alt="logo iPet" />
+                    </a>
+                </div>
+            </header>
+        </ui:insert>
+        <div>
+            <aside id="sidebar" class="sidebar">
+                <ui:insert name="side-left">
+                    <h:form id="side-form">
+                        <p:tieredMenu>
+                            <p:menuitem class="side-item ui-menu-active" value="Início" icon="fa fa-home" outcome="profilePage.xhtml" />      
+                            <p:menuitem class="side-item-target" disabled="true" value="Gerenciar Loja" />
+                            <p:menuitem class="side-item ui-menu-active" value="Pedidos" icon="fa fa-tachometer-alt" outcome="orderPage.xhtml"  />
+                            <p:divider />
+                            <p:menuitem class="side-item ui-menu-active" value="Produtos" icon="fa fa-paw" outcome="productsPage.xhtml" />     
+                            <p:menuitem class="side-item-target" disabled="true" value="Configurações Perfil" />
+                            <p:menuitem class="side-item ui-menu-active" value="Sair" action="#{usuarioControllerBean.logout()}" icon="fas fa-sign-out-alt" /> 
+                        </p:tieredMenu>
+                    </h:form>
+                </ui:insert>
+            </aside>
+            <div id="panel_content" class="panelContent">
+                <ui:insert name="content">
+                    
+                </ui:insert>
+            </div>
+        </div>
+    </h:body>
+
+</html>
