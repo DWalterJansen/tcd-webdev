@@ -37,7 +37,8 @@ public class DataServiceBean implements DataServiceBeanLocal {
                 group,
                 empresa
         );
-        em.persist(usuario);
+        empresa.setUsuario(usuario);
+        em.persist(empresa);
         return usuario;
     }
 

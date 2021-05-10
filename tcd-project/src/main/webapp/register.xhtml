@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns="http://www.w3.org/1999/xhtml"
                 template="./WEB-INF/templates/template.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
                 xmlns:p="http://primefaces.org/ui"
                 xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
 
@@ -13,21 +15,22 @@
                <div class="r-frame">
                    <div class="r-center">
                        <p:card class="form-register">
+                           <h:form>
                            <a class="logo" href="home.xhtml">
                                <img src="resources/images/logo.png" alt="logo iPet" />
                            </a>
-                           <p:inputText placeholder="Nome da Empresa" id="empresa" value="#{newUserController.user.empresa}"/>
-                           <p:inputText placeholder="Telefone" id="telefone" value="#{newUserController.user.telefone}" />
-                           <p:inputText placeholder="Nome" id="nome" value="#{newUserController.user.nome}" />
-                           <p:inputText placeholder="Tipo de Usuário" id="group" value="#{newUserController.user.group}" />
-                           <p:inputText placeholder="Email" id="email" value="#{newUserController.user.email}" />
-                           <p:inputText placeholder="Senha de Acesso" id="senha" value="#{newUserController.user.password}" />
-                           <p:commandButton value="Salvar" action="#{newUserController.user.save()}" />
+                           <p:inputText placeholder="Nome da Empresa" id="empresa" value="#{newUserController.empresa.cnpj}"/>
+                           <p:inputText placeholder="Telefone" id="telefone" value="#{newUserController.usuario.telefone}" />
+                           <p:inputText placeholder="Nome" id="nome" value="#{newUserController.usuario.nome}" />
+                           <p:inputText placeholder="Email" id="email" value="#{newUserController.usuario.email}" />
+                           <p:inputText placeholder="Senha de Acesso" id="senha" value="#{newUserController.usuario.password}" />
+                           <p:commandButton value="Salvar" action="#{newUserController.save()}"/>
                            <p class="register-login">Já possui conta?
                                <a href="login.xhtml">
                                   Entre agora
                                </a>
                            </p>
+                           </h:form>
                        </p:card>
                    </div>
                </div>

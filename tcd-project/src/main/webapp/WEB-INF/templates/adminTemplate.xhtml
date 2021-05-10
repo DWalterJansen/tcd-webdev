@@ -44,7 +44,7 @@
                             <p:divider />
                             <p:menuitem class="side-item ui-menu-active" value="Produtos" icon="fa fa-paw" outcome="productsPage.xhtml" />     
                             <p:menuitem class="side-item-target" disabled="true" value="Configurações Perfil" />
-                            <p:menuitem class="side-item ui-menu-active" value="Sair" icon="fas fa-sign-out-alt" /> 
+                            <p:menuitem class="side-item ui-menu-active" value="Sair" action="#{usuarioControllerBean.logout()}" icon="fas fa-sign-out-alt" /> 
                         </p:tieredMenu>
                     </h:form>
                 </ui:insert>
