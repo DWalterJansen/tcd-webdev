@@ -8,7 +8,7 @@ import javax.ejb.Local;
 @Local
 public interface DataServiceBeanLocal {
     
-    public Usuario criarUsuario(String email, String nome, String telegone, String password, String group, Empresa empresa);
+    public Usuario criarUsuario(String email, String nome, String password, String group, Empresa empresa);
     
     public Optional<Usuario> getUsuario(String email);
 }

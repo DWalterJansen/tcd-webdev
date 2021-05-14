@@ -38,8 +38,6 @@ public class Usuario implements Serializable {
     @Column(length = 100)
     private String nome;
 
-    @Column(length = 15)
-    private String telefone;
     
     @Column(name = "senha", nullable = false)
     private String password;
@@ -54,11 +52,10 @@ public class Usuario implements Serializable {
     //<editor-fold defaultstate="collapsed" desc="Constructors">
     public Usuario() {}
 
-    public Usuario(String email, String nome, String telegone, String password, 
+    public Usuario(String email, String nome, String password, 
             String group, Empresa empresa) {
         this.nome = nome;
         this.email = email;
-        this.telefone = telefone;
         this.password = password;
         this.group = group;
         this.empresa = empresa;
@@ -88,14 +85,6 @@ public class Usuario implements Serializable {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
     }
 
     public String getPassword() {

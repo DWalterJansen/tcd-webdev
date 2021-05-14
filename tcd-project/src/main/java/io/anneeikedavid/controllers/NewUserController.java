@@ -1,6 +1,7 @@
 package io.anneeikedavid.controllers;
 
 import io.anneeikedavid.empresa.Empresa;
+import io.anneeikedavid.endereco.Endereco;
 import io.anneeikedavid.services.DataServiceBeanLocal;
 import io.anneeikedavid.usuario.Usuario;
 import java.math.BigDecimal;
@@ -17,13 +18,16 @@ public class NewUserController {
     
     private Usuario usuario;
     private Empresa empresa;
+    private Endereco endereco;
 
     public NewUserController() {
         usuario = new Usuario();
         empresa = new Empresa();
+        endereco = new Endereco();
     }
 
     //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
+
     public Usuario getUsuario() {
         return usuario;
     }
@@ -40,19 +44,20 @@ public class NewUserController {
         this.empresa = empresa;
     }
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
     //</editor-fold>
     
     public String save() {
-        empresa.setCnpj("000100021000");
-        empresa.setPix("000100021000");
-        empresa.setRaioEntrega(0);
-        empresa.setEmailCorporativo("empresa@email.com");
-        empresa.setTempoMedioEntrega(0.0);
-        empresa.setPrecoEntregaBase(new BigDecimal(0));
-        empresa.setPrecoEntregaExtraKm(new BigDecimal(0));
-        usuario = dataService.criarUsuario(usuario.getEmail(), usuario.getNome(), usuario.getTelefone(), usuario.getPassword(), "admin", empresa);
-        System.out.println("Chegou aqui");
-        return "/webapp/login.xhtml";
+        empresa.setEndereco(endereco);
+        usuario = dataService.criarUsuario(usuario.getEmail(), usuario.getNome(), usuario.getPassword(), "admin", empresa);
+        return "/login.xhtml";
     }
     
 }

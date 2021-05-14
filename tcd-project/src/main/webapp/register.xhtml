@@ -5,6 +5,7 @@
                 template="./WEB-INF/templates/template.xhtml"
                 xmlns:h="http://xmlns.jcp.org/jsf/html"
                 xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core">
                 xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
 
     <ui:define name="body">
@@ -19,12 +20,84 @@
                            <a class="logo" href="home.xhtml">
                                <img src="resources/images/logo.png" alt="logo iPet" />
                            </a>
-                           <p:inputText placeholder="Nome da Empresa" id="empresa" value="#{newUserController.empresa.cnpj}"/>
-                           <p:inputText placeholder="Telefone" id="telefone" value="#{newUserController.usuario.telefone}" />
-                           <p:inputText placeholder="Nome" id="nome" value="#{newUserController.usuario.nome}" />
-                           <p:inputText placeholder="Email" id="email" value="#{newUserController.usuario.email}" />
-                           <p:inputText placeholder="Senha de Acesso" id="senha" value="#{newUserController.usuario.password}" />
-                           <p:commandButton value="Salvar" action="#{newUserController.save()}"/>
+                           <h3>Dados da Empresa</h3>
+                           <p:inputMask 
+                               placeholder="CNPJ" 
+                               mask="99.999.999/9999-99"
+                               id="cnpj_empresa" 
+                               value="#{newUserController.empresa.cnpj}"
+                               required="true"
+                           />
+                           <p:inputText 
+                               placeholder="Rua" 
+                               id="endereco_rua_empresa" 
+                               value="#{newUserController.endereco.rua}"
+                               required="true"
+                           />
+                           <p:inputText 
+                               placeholder="Número" 
+                               id="endereco_numero_empresa" 
+                               value="#{newUserController.endereco.numero}"
+                               required="true"
+                           />
+                           <p:inputText 
+                               placeholder="Bairro" 
+                               id="endereco_Bairro_empresa" 
+                               value="#{newUserController.endereco.bairro}"
+                               required="true"
+                           />
+                           <p:inputText 
+                               placeholder="Cidade" 
+                               id="endereco_cidade_empresa" 
+                               value="#{newUserController.endereco.cidade}"
+                               required="true"
+                           />
+                           <p:inputText
+                               placeholder="Estado"
+                               id="endereco_estado_empresa" 
+                               value="#{newUserController.endereco.estado}"
+                               required="true"
+                           />
+                           <p:inputText 
+                               placeholder="Pix da Empresa" 
+                               id="pix_empresa" 
+                               value="#{newUserController.empresa.pix}"
+                               required="true"
+                            />
+                           <p:inputText 
+                               placeholder="Raio de Entrega" 
+                               id="raio_entrega_empresa" 
+                               value="#{newUserController.empresa.raioEntrega}"
+                               required="true"
+                            />
+                           <p:inputText 
+                               placeholder="Preço de Entrega por KM" 
+                               id="preco_entrega_km_empresa" 
+                               value="#{newUserController.empresa.precoEntregaKm}"
+                               required="true"
+                            />
+                           <h3>Dados do Administrador</h3>
+                           <p:inputText 
+                               placeholder="Nome Representante" 
+                               id="nome_usuario" 
+                               value="#{newUserController.usuario.nome}"
+                               required="true"
+                            />
+                           <p:inputText 
+                               placeholder="Email Representante" 
+                               id="email_usuario" 
+                               value="#{newUserController.usuario.email}"
+                               required="true"
+                           />
+                           <p:inputText 
+                               placeholder="Senha de Acesso" 
+                               id="senha_usuario" 
+                               value="#{newUserController.usuario.password}"
+                               required="true"
+                           />
+                           <p:commandButton 
+                               value="Salvar" 
+                               action="#{newUserController.save()}"/>
                            <p class="register-login">Já possui conta?
                                <a href="login.xhtml">
                                   Entre agora
