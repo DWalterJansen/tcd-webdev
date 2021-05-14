@@ -21,7 +21,7 @@ public class DataServiceBean implements DataServiceBeanLocal {
     Pbkdf2PasswordHash passwordHasher;
 
     @Override
-    public Usuario criarUsuario(String email, String nome, String telegone, String password, String group, Empresa empresa) {
+    public Usuario criarUsuario(String email, String nome, String password, String group, Empresa empresa) {
         // @see ApplicationConfig
         Map<String, String> parameters = new HashMap<>();
         parameters.put("Pbkdf2PasswordHash.Iterations", "3071");
@@ -32,7 +32,6 @@ public class DataServiceBean implements DataServiceBeanLocal {
         Usuario usuario = new Usuario(
                 email,
                 nome,
-                telegone,
                 passwordHasher.generate(password.toCharArray()),
                 group,
                 empresa

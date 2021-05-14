@@ -40,10 +40,6 @@ public class Empresa implements Serializable {
     @Column()
     private String cnpj;
     
-    
-    @Column()
-    private String emailCorporativo;
-    
     // usuario
     @OneToOne(
         fetch = FetchType.EAGER,
@@ -81,15 +77,9 @@ public class Empresa implements Serializable {
     
     @Column()
     private Integer raioEntrega;
-    
-    @Column()
-    private BigDecimal precoEntregaBase;
 
     @Column()
-    private BigDecimal precoEntregaExtraKm;
-    
-    @Column()
-    private Double tempoMedioEntrega;
+    private BigDecimal precoEntregaKm;
     
     // Lista Cupom
     @OneToMany(
@@ -113,14 +103,6 @@ public class Empresa implements Serializable {
 
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
-    }
-
-    public String getEmailCorporativo() {
-        return emailCorporativo;
-    }
-
-    public void setEmailCorporativo(String emailCorporativo) {
-        this.emailCorporativo = emailCorporativo;
     }
 
     public Usuario getUsuario() {
@@ -171,28 +153,12 @@ public class Empresa implements Serializable {
         this.raioEntrega = raioEntrega;
     }
 
-    public BigDecimal getPrecoEntregaBase() {
-        return precoEntregaBase;
+    public BigDecimal getPrecoEntregaKm() {
+        return precoEntregaKm;
     }
 
-    public void setPrecoEntregaBase(BigDecimal precoEntregaBase) {
-        this.precoEntregaBase = precoEntregaBase;
-    }
-
-    public BigDecimal getPrecoEntregaExtraKm() {
-        return precoEntregaExtraKm;
-    }
-
-    public void setPrecoEntregaExtraKm(BigDecimal precoEntregaExtraKm) {
-        this.precoEntregaExtraKm = precoEntregaExtraKm;
-    }
-
-    public Double getTempoMedioEntrega() {
-        return tempoMedioEntrega;
-    }
-
-    public void setTempoMedioEntrega(Double tempoMedioEntrega) {
-        this.tempoMedioEntrega = tempoMedioEntrega;
+    public void setPrecoEntregaKm(BigDecimal precoEntregaKm) {
+        this.precoEntregaKm = precoEntregaKm;
     }
 
     public List<Cupom> getCupons() {
